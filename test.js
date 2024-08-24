@@ -1,12 +1,11 @@
 
+getText("text.txt");
 
+async function getText(file) {
+    let myObj=await fetch(file);
+    let myText=await myObj.text();
 
+    document.getElementById("demo").innerHTML=myText;
+    
 
-let arr=["a","b","c"];
-
-arr.pop();
-arr.pop();
-arr.pop();
-
-console.log(arr);
-
+}
