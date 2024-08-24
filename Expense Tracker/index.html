@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <style>
+            body {
+                text-align: center;
+
+            }
+
+            .left-column {
+                width: 15%;
+                float: left;
+
+            }
+
+            .middle-column {
+
+                width:70%;
+                float: inline-start;
+                
+            }
+
+            .right-column {
+                width: 15%;
+                float: right;
+
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+
+            h2 {
+
+                color: green;
+            }
+
+
+            #input1 {
+                width:70%;;
+                height: 30px;
+                margin-bottom: 10px;
+                
+            }
+
+            #input2 {
+                width:30%;
+                height: 30px;
+                
+            }
+
+            #input3 {
+                width:30%;
+                height: 30px;
+                
+            }
+
+            span {
+                font-weight: bolder;
+                font-size: larger;
+            }
+
+            
+
+            #CustomButton {
+                height: 30px;
+                margin-top: 30px;
+                background-color: green;
+                color: white;
+                font-size: large;
+                padding-top: 15px;
+                padding-bottom: 30px;
+                padding-left: 15px;
+                padding-right: 15px;
+                border-radius: 8px;
+            }
+
+            #CustomButton:hover {
+                border: 2px solid lawngreen;
+            }
+                
+
+            table {
+                width: 70%;
+                margin-top: 30px;
+                border-color: aliceblue;
+                border-collapse: collapse;
+            }
+
+            table td,th {
+                width: 20%;
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            td {
+                background-color: #dddddd;
+            }
+
+
+            ul li {
+                display:flexbox;
+                margin-left: 250px;
+                padding-right: 420px;
+                padding-top: 20px;
+                font-size: larger;
+                font-weight: bolder;
+            }
+
+            li button {
+                float: right;
+            }
+
+
+        </style>
+
+        
+    </head>
+
+    <body>
+
+        <h1>Expense Tracker ggkkg bjgkug</h1>
+        <h2>Add A New Item:</h2>
+
+        <div class="left-column">.</div>
+
+        <div class="middle-column">
+            <span>Name:</span>
+            <input id="input1" type="text" placeholder="Where are the expense made?"><br>
+            <span>Date:</span>
+            <input id="input2" type="text" placeholder="mm/dd/yyyy">
+            <span>Amount:</span>
+            <input id="input3" type="text">
+
+            <br>
+
+            <button id="CustomButton" onclick="addExpense()">Add Expense</button>
+
+            
+
+            <table id="TABLE" border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                </tr>
+
+                <tr id="emptyBox">
+                    <td colspan="3">No expenses added yet!</td>
+
+
+                </tr>
+                
+            </table>
+
+            
+
+        </div>
+
+        <div class="right-column"></div>
+
+        <script src="script1.js"></script>
+   
+        
+    </body>
+</html>

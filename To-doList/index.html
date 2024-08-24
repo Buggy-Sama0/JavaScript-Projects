@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <style>
+            body {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+
+            .container-border {
+                border: 3px solid;
+                color: black;
+                width:60%;
+                border-radius: 20px;
+                height:500px;
+                text-align: center;
+
+            }
+
+            h1 {
+                padding-top: 30px;
+                padding-bottom: 60px;
+            }
+
+            input {
+                width:40%;;
+                height: 30px;
+                background-color: aquamarine;   
+            }
+
+            button {
+                height: 30px;
+            }
+
+            ul li {
+                display:flexbox;
+                margin-left: 250px;
+                padding-right: 420px;
+                padding-top: 20px;
+                font-size: larger;
+                font-weight: bolder;
+            }
+
+            li button {
+                float: right;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+
+        
+
+
+
+        <div class="container-border">
+            <h1>To-Do List</h1>
+
+            <input id="input" type="text" placeholder="Add An Item!">
+            <button onclick="submit()">Submit</button>
+            <button type="button">Clear List</button>
+
+            <ul id="list-Task">
+                <!--<li>Task 1</li>
+                <li>Task 2</li>-->
+            </ul>
+        </div>
+
+
+
+        <script src="script.js"></script>
+
+
+
+
+        
+        
+        
+    </body>
+</html>

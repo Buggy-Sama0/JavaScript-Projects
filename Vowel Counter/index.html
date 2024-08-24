@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+        <style>
+            body {
+                text-align: center;
+
+            }
+
+            .left-column {
+                width: 10%;
+                float: left;
+
+            }
+
+            .middle-column {
+
+                width:80%;
+                float: inline-start;
+                
+            }
+
+            .right-column {
+                width: 10%;
+                float: right;
+
+            }
+
+
+            #input {
+                width:70%;;
+                padding: 10px;
+                
+            }
+
+            #CustomButton {
+                height: 30px;
+                margin-top: 30px;
+                background-color: green;
+                color: white;
+                font-size: large;
+                padding-top: 15px;
+                padding-bottom: 30px;
+                padding-left: 15px;
+                padding-right: 15px;
+                border-radius: 8px;
+            }
+
+            #CustomButton:hover {
+                border: 2px solid lawngreen;
+            }
+                
+
+        </style>
+
+        
+    </head>
+
+    <body>
+
+        <!-- 
+                --max-lines:2;
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: var(--max-lines);
+            -->
+                
+        <h1>Vowel Counter</h1>
+        <div class="left-column">.</div>
+
+        <div class="middle-column">
+            <input id="input" type="text" placeholder="Enter a piece of text"><br>
+            <br>
+
+            <button id="CustomButton" onclick="checkVowel()">Check</button>
+
+            <ul id="list">
+
+            </ul>
+
+        </div>
+
+        <div class="right-column"></div>
+
+        <script src="script.js"></script>
+   
+        
+    </body>
+</html>
