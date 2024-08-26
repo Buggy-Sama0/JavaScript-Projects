@@ -1,4 +1,4 @@
-
+/*
 const promiseOne=new Promise(function(resolve,reject) {
     setTimeout(()=>{
         console.log("Aysn is complemete");
@@ -81,6 +81,8 @@ async function consumePromiseFive(){
 
 consumePromiseFive();
 
+*/
+
 /*
 async function getAllUsers() {
     try {
@@ -94,14 +96,80 @@ async function getAllUsers() {
 
 getAllUsers();*/
 
-
+/*
 fetch("https://jsonplaceholder.typicode.com/users")
 .then((response)=>{
     return response.json();
+}).then((data)=>{
+    console.log(data);
 })
-.then((data)=>{
-    console.log(data)
-})
-.catch((error)=>{
-    console.log(error);
-})
+
+const data={
+    title:"This is the title",
+    body:"this is post body",
+    userId:2
+}
+
+
+fetch("https://jsonplaceholder.typicode.com/posts",{
+    method:"POST",
+    body: JSON.stringify(data),
+    headers:{
+        "Content-type":"application/json"
+    }
+}).then((res)=>res.json()).then((data)=>{console.log(data)})
+*/
+
+
+SetItem=()=>{
+    let key=document.forms.key;
+    let data=document.forms.data;
+
+
+    if (key=="" || data=="") {
+        alert("Input is empty");
+    } else {
+        localStorage.setItem(key,data);
+    }
+
+    ShowAll();
+    
+}
+
+RemoveItem=()=>{
+
+}
+
+
+
+GetItem=()=>{
+    let key=document.forms.key.value;
+    localStorage.getItem(key);
+
+    if(localStorage.getItem(key)==null) {
+        alert("Not Found");
+    }
+}
+
+Clear=()=>{
+    localStorage.clear();
+    ShowAll();
+}
+
+ClearInput=()=>{
+    document.forms.demo.key.value = "";
+	document.forms.demo.data.value = "";
+}
+
+
+ShowAll=()=>{
+    const items=document.getElementById("list");
+
+    for (let i=0;i<localStorage.length;i++) {
+        let key=localStorage.key(i);
+        let item=document.createElement("li");
+        item.innerHTML=key+" : "+localStorage.getItem(key);
+        items.appendChild(item);            
+    }    
+   
+}

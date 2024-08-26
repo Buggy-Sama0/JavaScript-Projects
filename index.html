@@ -5,16 +5,34 @@
         <style>  
         </style>
     </head>
-    <body>
-
-        <h>Fetch API</h>
-        
-
-
-        <p id="demo">FETCH A FILE TO CHANGE THIS TEXT</p>
-
+    <body onload="ShowAll()">
 
         <script src="test.js"></script>
+
+        <h1>HTML5 LocalStorage Demo</h1>
+        <span id="msg" style="color:red; font-weight:bold">Welcome</span>
+        <hr/>
+        <form name="demo">
+            Name:<input type="text" name="key">&nbsp;&nbsp;
+            Value:<input type="text" name="data">
+            <p>
+                <input type="button" value="Read Item" onclick="GetItem()">
+                <input type="button" value="Remove Item" onclick="RemoveItem()">
+                <input type="button" value="Clear Input" onclick="ClearInput()">			
+                <input type="button" value="Save Item" onclick="SetItem()">
+            </p>	
+            <hr/>
+            <h2>Items</h2>
+            <ol id="list">
+
+            </ol>
+            <p>
+            <input type="button" value="Reset" onclick="Clear()">
+            </p>
+        </form>
+
+
+        
         
     </body>
 </html>
