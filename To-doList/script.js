@@ -16,10 +16,10 @@ function addTask(text) {
     button.innerHTML="X";
     li.appendChild(button);
 
-    button.onclick=function() {
+    button.addEventListener("click",function() {
         li.remove();
-    }
 
+    })
 
 }
 
