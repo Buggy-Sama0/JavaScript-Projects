@@ -24,8 +24,12 @@
 
             #display-board {
                 background-color: rgba(14, 56, 67, 0.984);
-                padding-top: 200px;
+                height: 200px;
                 border-radius: 20px;
+                padding-left: 360px;
+                padding-top: 50px;
+                display:inline-flex;
+                
 
             }
 
@@ -100,7 +104,9 @@
     <body>
 
         <div id="calculator">
-            <div id="display-board"></div>
+            <div id="display-board">
+                
+            </div>
             <div id="button-layout">
                 <button id="restartButton">AC</button>
                 <button class="functionButton">(  )</button>
@@ -131,7 +137,7 @@
 
                 <button class="operands">0</button>
                 <button class="operands">.</button>
-
+ 
                 <button class="operator">=</button>
 
 
@@ -140,6 +146,8 @@
 
             </div>
         </div>
+
+        <script src="script.js"></script>
 
 
     </body>
