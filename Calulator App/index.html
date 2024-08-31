@@ -2,8 +2,145 @@
 <html>
     <head>
         <title>Calculator App</title>
+
+        <style>
+            body {
+                background-color: rgb(28, 184, 132);
+   
+            }
+
+            #calculator {
+
+                background-color: rgba(14, 56, 67, 0.984);
+                margin-top: 250px;
+                width: 30%;
+                height: 600px;
+                margin-left: 500px;
+                border-radius: 20px;
+                position: absolute;
+
+                
+            }
+
+            #display-board {
+                background-color: rgba(14, 56, 67, 0.984);
+                padding-top: 200px;
+                border-radius: 20px;
+
+            }
+
+            #button-layout {
+                background-color: rgb(30, 74, 84);
+                border-radius: 20px;
+                padding-left: 18px;
+                padding-bottom: 25px;
+                
+            }
+
+            #restartButton {
+                color:rgb(24, 215, 215);
+                font-size: 1.9em;
+                font-weight: bolder;
+                margin-left: 16px;
+                padding:10px 11px;
+                border-radius: 12px;
+                margin-top: 25px;
+                background-color: rgba(29, 51, 72, 0.984);
+            }
+
+            #deleteButton {
+                color:rgb(24, 215, 215);
+                font-size: 1.9em;
+                font-weight: bolder;
+                margin-left: 16px;
+                padding:10px 22px;
+                border-radius: 12px;
+                margin-top: 25px;
+                background-color: rgba(29, 51, 72, 0.984);
+            }
+
+
+
+            .functionButton {
+                color:rgb(24, 215, 215);
+                font-size: 1.9em;
+                font-weight: bolder;
+                margin-left: 16px;
+                padding:10px 15px;
+                border-radius: 12px;
+                margin-top: 25px;
+                background-color: rgba(29, 51, 72, 0.984);
+            }
+
+            .operator {
+                color:rgb(193, 30, 30);
+                font-size: 1.9em;
+                font-weight: bolder;
+                margin-left: 16px;
+                padding:10px 22px;
+                border-radius: 12px;
+                background-color: rgba(29, 51, 72, 0.984);
+            }
+
+            .operands {
+                color:rgb(248, 248, 248);
+                font-size: 1.9em;
+                font-weight: bolder;
+                margin-left: 16px;
+                padding:10px 22px;
+                border-radius: 12px;
+                margin-top: 20px;
+                background-color: rgba(29, 51, 72, 0.984);
+
+            }
+
+
+        </style>
     </head>
     <body>
-        
+
+        <div id="calculator">
+            <div id="display-board"></div>
+            <div id="button-layout">
+                <button id="restartButton">AC</button>
+                <button class="functionButton">(  )</button>
+                <button class="functionButton">%</button>
+                <button class="operator">/</button>
+
+                <button class="operands">7</button>
+                <button class="operands">8</button>
+                <button class="operands">9</button>
+
+                <button class="operator">*</button>
+
+                <button class="operands">4</button>
+                <button class="operands">5</button>
+                <button class="operands">6</button>
+
+                
+                
+                <button class="operator">-</button>
+
+                <button class="operands">1</button>
+                <button class="operands">2</button>
+                <button class="operands">3</button>
+
+                <button class="operator">+</button>
+
+                <button id="deleteButton"><</button>
+
+                <button class="operands">0</button>
+                <button class="operands">.</button>
+
+                <button class="operator">=</button>
+
+
+
+
+
+            </div>
+        </div>
+
+
     </body>
 </html>
