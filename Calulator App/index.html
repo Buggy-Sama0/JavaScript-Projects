@@ -6,102 +6,79 @@
         <style>
             body {
                 background-color: rgb(28, 184, 132);
-                
-   
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
             }
 
             #calculator {
-
-                background-color: rgba(14, 56, 67, 0.984);
-                margin-top: 250px;
-                width: 30%;
+                background-color: rgba(61, 151, 69, 0.984);
+                width: 300px;
                 height: 600px;
-                margin-left: 500px;
                 border-radius: 20px;
-                position: absolute;
-
-                
+                padding: 24px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             }
 
             #display-board {
                 background-color: rgba(14, 56, 67, 0.984);
-                height: 200px;
-                border-radius: 20px;
-                padding-left: 320px;
-                padding-top: 50px;
-                display:-webkit-inline-flex;
-                width: 19%;
-                overflow:scroll;
-                
-            }
-
-            p {
-                
+                height: 180px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 10px;
+                font-size: 1.5em;
+                color: white;
             }
 
             #button-layout {
-                background-color: rgb(30, 74, 84);
-                border-radius: 20px;
-                padding-left: 18px;
-                padding-bottom: 25px;
-                
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                padding-top: 20px;
             }
 
-            #restartButton {
-                color:rgb(24, 215, 215);
-                font-size: 1.9em;
-                font-weight: bolder;
-                margin-left: 16px;
-                padding:10px 11px;
-                border-radius: 12px;
-                margin-top: 25px;
-                background-color: rgba(29, 51, 72, 0.984);
+            button {
+                font-size: 1.2em;
+                font-weight: bold;
+                padding: 15px;
+                border-radius: 8px;
+                border: none;
+                transition: background-color 0.3s, transform 0.2s;
             }
 
-            #deleteButton {
-                color:rgb(24, 215, 215);
-                font-size: 1.9em;
-                font-weight: bolder;
-                margin-left: 16px;
-                padding:10px 22px;
-                border-radius: 12px;
-                margin-top: 25px;
-                background-color: rgba(29, 51, 72, 0.984);
+            button:active {
+                transform: scale(0.95);
             }
 
-
-
-            .functionButton {
-                color:rgb(24, 215, 215);
-                font-size: 1.9em;
-                font-weight: bolder;
-                margin-left: 16px;
-                padding:10px 15px;
-                border-radius: 12px;
-                margin-top: 25px;
+            .functionButton, .operator, .operands, #outputButton {
                 background-color: rgba(29, 51, 72, 0.984);
+                color: white;
+            }
+
+            .functionButton:hover, .operator:hover, .operands:hover, #outputButton:hover, 
+            #restartButton:hover, #deleteButton:hover  {
+                background-color: rgba(50, 90, 110, 0.984);
             }
 
             .operator {
-                color:rgb(193, 30, 30);
-                font-size: 1.9em;
-                font-weight: bolder;
-                margin-left: 16px;
-                padding:10px 22px;
-                border-radius: 12px;
-                background-color: rgba(29, 51, 72, 0.984);
+                color: rgb(193, 30, 30);
             }
 
-            .operands {
-                color:rgb(248, 248, 248);
-                font-size: 1.9em;
-                font-weight: bolder;
-                margin-left: 16px;
-                padding:10px 22px;
-                border-radius: 12px;
-                margin-top: 20px;
+            #restartButton {
+                grid-column: span 2;
                 background-color: rgba(29, 51, 72, 0.984);
+                color: rgb(24, 215, 215);
+            }
 
+            #deleteButton {
+                grid-column: span 2;
+                background-color: rgba(29, 51, 72, 0.984);
+                color: rgb(24, 215, 215);
             }
 
 
@@ -139,17 +116,12 @@
 
                 <button class="operator">+</button>
 
-                <button id="deleteButton"><</button>
+                <button id="deleteButton">DEL</button>
 
                 <button class="operands">0</button>
                 <button class="operands">.</button>
  
-                <button class="operator">=</button>
-
-
-
-
-
+                <button id="outputButton">=</button>
             </div>
         </div>
 
