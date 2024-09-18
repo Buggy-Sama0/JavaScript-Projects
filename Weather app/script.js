@@ -11,7 +11,7 @@ form.addEventListener("submit",e=> {
 
 })
 
-const apiKey = "31df6234a119c468a67a3d56fe8bd3ff";
+const apiKey = "my_key";
 const inputVal = input.value;
 
 async function getData() {
