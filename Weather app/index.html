@@ -14,9 +14,10 @@
         <h1>Simple Weather App</h1>
 
         <form>
-            <input type="text" name="CityInput" 
+            <input type="text" id="CityInput" 
             placeholder="Search for a city" autofocus>
             <button type="submit">SUBMIT</button>
+            <span id="message"></span>
 
         </form>
 
@@ -24,7 +25,7 @@
 
     <section class="ajax-section">
         <div class="container">
-          <ul class="cities"></ul>
+          <ul id="cityList"></ul>
         </div>
     </section>
 
